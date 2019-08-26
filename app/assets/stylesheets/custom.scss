@@ -1,0 +1,16 @@
+  
+        
+/* -------begin customization-------- */   
+
+/* simply assign the value */ 
+$body-bg: #eeeeee;
+$body-color: #333;
+
+/* or, use an existing variable */
+$theme-colors: (
+  primary: #ff0000
+);
+/* -------end customization-------- */  
+
+/* finally, import Bootstrap to set the changes! */
+@import "bootstrap/scss/bootstrap";
