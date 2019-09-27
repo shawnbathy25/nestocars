@@ -1,13 +1,17 @@
 $(function() {
 	$('.car-img').each(function(index) {
 		var search = $(this).data('search');
+		var carId = $(this).data('id');
+
 		// console.log(search);
 
 		$.get("http://www.carimagery.com/api.asmx/GetImageUrl?searchTerm=" + search).success( function( data ) {
 
-			console.log(data);
+			// console.log(data);
+			var xml = $(data).find('string').html();
+			// console.log(xml);
 
-			$(this).html("http://www.regcheck.org.uk/image.aspx/@MjAwOSBUb3lvdGEgQ2Ftcnk=");
+			$('#div-' + carId).html('<img class="car-image" src="' + xml + '" />');
 
 		  });
 

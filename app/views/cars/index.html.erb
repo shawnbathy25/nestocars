@@ -4,6 +4,6 @@
       <%= car.model %>
       <%= car.year %>
   </h2>
-<div class="car-img" data-search="<%= "#{car.year}+#{car.make}+#{car.model}" %>"></div>
+<div class="car-img" id="div-<%= car.id %>" data-id="<%= car.id %>" data-search="<%= "#{car.year}+#{car.make}+#{car.model}" %>"></div>
 
 <% end %>
