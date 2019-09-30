@@ -5,11 +5,11 @@ $(function() {
 
 		// console.log(search);
 
-		$.get("http://www.carimagery.com/api.asmx/GetImageUrl?searchTerm=" + search).success( function( data ) {
+		$.get("https://www.carimagery.com/api.asmx/GetImageUrl?searchTerm=" + search).success( function( data ) {
 
 			// console.log(data);
 			var xml = $(data).find('string').html();
-			// console.log(xml);
+			//  console.log(xml);
 
 			$('#div-' + carId).html('<img class="car-image" src="' + xml + '" />');
 
